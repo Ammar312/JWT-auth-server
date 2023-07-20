@@ -1,0 +1,107 @@
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;600;700&display=swap");
+
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;500;600;700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  /* font-family: "Raleway", sans-serif; */
+  font-family: "Noto Sans", sans-serif;
+}
+body {
+  background: linear-gradient(to bottom, #2193b0, #6dd5ed);
+  /* background: linear-gradient(to bottom, #ddd6f3, #faaca8); */
+  min-height: 100vh;
+}
+header {
+  background-color: black;
+  /* background-color: rgb(161, 6, 6); */
+  padding: 0.7em 0 0.7em 0;
+}
+header p {
+  text-align: center;
+  font-size: 2.7rem;
+  font-weight: 600;
+  color: #ffffff;
+  text-transform: uppercase;
+  word-spacing: 0.3em;
+  letter-spacing: 0.05em;
+}
+.formContainer {
+  width: 30em;
+  padding: 1em;
+  background-color: aliceblue;
+  box-shadow: 2px 3px 45px rgba(255, 255, 255, 0.219);
+  border-radius: 7px;
+  margin: 1.5em 2em;
+}
+
+.formContainer form {
+  display: flex;
+  flex-direction: column;
+  padding: 1em;
+}
+label {
+  font-size: 1.4rem;
+}
+.box {
+  width: 18em;
+  padding: 0.6em;
+  font-size: 1.2rem;
+  outline: none;
+  border: 2px solid rgb(121, 119, 119);
+  border-radius: 6px;
+  margin-bottom: 0.7em;
+}
+.btn {
+  width: 6em;
+  font-size: 1.3rem;
+  padding: 0.5em;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+  background-color: #2193b0;
+  color: white;
+  transition: all 0.3s ease-in;
+}
+
+@media screen and (max-width: 594px) {
+  header p {
+    font-size: 2rem;
+  }
+}
+@media screen and (max-width: 520px) {
+  header {
+    margin-bottom: 6em;
+  }
+  .formContainer {
+    padding: 0;
+    margin: 0;
+  }
+}
+@media screen and (max-width: 480px) {
+  .formContainer {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 385px) {
+  label {
+    font-size: 1.2rem;
+  }
+  .box {
+    width: 12em;
+    padding: 0.6em;
+    font-size: 1.2rem;
+  }
+  .btn {
+    width: 5em;
+    font-size: 1.2rem;
+    padding: 0.5em;
+  }
+}
+@media screen and (max-width: 350px) {
+  header p {
+    font-size: 1.5rem;
+  }
+}

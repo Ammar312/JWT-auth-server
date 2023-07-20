@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <header>
+      <p>Signup Server</p>
+    </header>
+    <section class="formContainer">
+      <form id="form" class="form">
+        <label for="email">Email</label>
+        <input
+          type="email"
+          placeholder="qwe@gmail.com"
+          class="box"
+          id="email"
+        />
+        <label for="email">Password</label>
+        <input type="password" name="password" id="password" class="box" />
+        <input type="submit" class="btn" id="btn" />
+      </form>
+    </section>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script type="module" src="./script.js"></script>
+  </body>
+</html>
