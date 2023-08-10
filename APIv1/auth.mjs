@@ -1,6 +1,6 @@
 import express from "express";
 import { client } from "../mongodb.mjs";
-import { Jwt } from "jsonwebtoken";
+import { jwt } from "jsonwebtoken";
 const router = express.Router();
 const db = client.db("crudDB");
 const dbCollection = db.collection("users");
@@ -20,7 +20,7 @@ router.post("/login", async (req, res, next) => {
       const isCompare = await varifyHash(req.body.password, result.password);
       if (isCompare) {
         // Genarate a Token
-        const token = Jwt.sign(
+        const token = jwt.sign(
           {
             isAdmin: false,
             firstName: result.firstName,
