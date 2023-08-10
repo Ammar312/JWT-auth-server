@@ -32,7 +32,7 @@ router.post("/login", async (req, res, next) => {
     res.status(500).send({ message: "server error, please try later" });
   }
 });
-router.post("/signup", (req, res, next) => {
+router.post("/signup", async (req, res, next) => {
   if (
     !req.body.email ||
     !req.body.firstname ||
@@ -41,6 +41,30 @@ router.post("/signup", (req, res, next) => {
   ) {
     res.status(403).send({ message: "Required Paramater Missing" });
     return;
+  }
+  const emailInLower = req.body.email.toLowerCase();
+  try {
+    const result = dbCollection.findOne({
+      email: emailInLower,
+    });
+    if (!result) {
+      const passwordHash = await stringToHash(req.body.password);
+      const addUser = dbCollection.insertOne({
+        firstName: req.body.firstName,
+        lastName: req.body.lastName,
+        email: req.body.email,
+        password: passwordHash,
+        createdOn: new Date(),
+      });
+      res.send({ message: "SIgnup Successfully" });
+    } else {
+      res.status(403).send({
+        message: "User already exist with this email",
+      });
+    }
+  } catch (error) {
+    console.log("error getting data mongodb: ", e);
+    res.status(500).send("server error, please try later");
   }
 });
 

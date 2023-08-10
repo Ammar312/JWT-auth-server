@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="shortcut icon"
+      href="./cloud-data_3305673.png"
+      type="image/x-icon"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css"
+    />
+    <link rel="stylesheet" href="home.css" />
+    <title>Crud-Operation with SERVER</title>
+  </head>
+  <body>
+    <header>
+      <p>SERVER CRUD</p>
+    </header>
+    <button class="createPostBtn" id="createPostBtn">Create Post</button>
+    <div class="formContainer" id="formContainer">
+      <form id="form" class="form">
+        <label for="" class="label">Title :</label>
+        <input type="text" name="title" id="title" class="titleForm" />
+        <br />
+        <label for="" class="label">Text :</label>
+        <input type="text" name="text" id="text" class="titleForm" />
+        <br />
+        <input type="submit" id="btn" class="btn" value="Post" />
+      </form>
+    </div>
+    <section class="postContainer" id="postContainer"></section>
+    <div class="editFormDiv" id="editFormDiv">
+      <span class="cross" id="cross"><i class="bi bi-x-lg"></i></span>
+      <form id="editForm" class="editForm">
+        <label for="title">Title</label>
+        <input type="text" id="editFormTitle" class="editFormInput" />
+        <br />
+        <label for="text">Text</label>
+        <input type="text" id="editFormText" class="editFormInput" />
+        <br />
+        <input type="submit" name="" id="editFormBtn" class="editFormButton" />
+      </form>
+    </div>
+    <span class="alertBox" id="alertBox"></span>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script type="module" src="./home.js"></script>
+  </body>
+</html>
