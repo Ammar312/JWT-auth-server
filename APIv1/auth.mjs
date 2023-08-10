@@ -1,5 +1,6 @@
 import express from "express";
 import { client } from "../mongodb.mjs";
+import { Jwt } from "jsonwebtoken";
 const router = express.Router();
 const db = client.db("crudDB");
 const dbCollection = db.collection("users");
@@ -19,6 +20,23 @@ router.post("/login", async (req, res, next) => {
       const isCompare = await varifyHash(req.body.password, result.password);
       if (isCompare) {
         // Genarate a Token
+        const token = Jwt.sign(
+          {
+            isAdmin: false,
+            firstName: result.firstName,
+            lastName: result.lastName,
+            email: req.body.email,
+          },
+          process.env.SECERET,
+          {
+            expiresIn: "1h",
+          }
+        );
+        res.cookie("token", token, {
+          httpOnly: true,
+          secure: true,
+          maxAge: 120000,
+        });
         res.send({
           message: "Login Successfully",
         });
@@ -35,8 +53,8 @@ router.post("/login", async (req, res, next) => {
 router.post("/signup", async (req, res, next) => {
   if (
     !req.body.email ||
-    !req.body.firstname ||
-    !req.body.lastname ||
+    !req.body.firstName ||
+    !req.body.lastName ||
     !req.body.password
   ) {
     res.status(403).send({ message: "Required Paramater Missing" });
@@ -64,7 +82,7 @@ router.post("/signup", async (req, res, next) => {
     }
   } catch (error) {
     console.log("error getting data mongodb: ", e);
-    res.status(500).send("server error, please try later");
+    res.status(500).send("Server Error, Please try later");
   }
 });
 

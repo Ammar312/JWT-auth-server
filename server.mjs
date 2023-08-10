@@ -1,6 +1,7 @@
 import express from "express";
 import path from "path";
 import apiv1 from "./APIv1/index.mjs";
+import cookieParser from "cookie-parser";
 
 const app = express();
 const __dirname = path.resolve();
