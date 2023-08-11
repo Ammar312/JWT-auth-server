@@ -1,6 +1,7 @@
 import express from "express";
 import { client } from "../mongodb.mjs";
 import { jwt } from "jsonwebtoken";
+import { stringToHash, varifyHash } from "bcrypt-inzi";
 const router = express.Router();
 const db = client.db("crudDB");
 const dbCollection = db.collection("users");

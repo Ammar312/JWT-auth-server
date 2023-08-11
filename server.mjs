@@ -3,6 +3,7 @@ import path from "path";
 import apiv1 from "./APIv1/index.mjs";
 import authRouter from "./APIv1/auth.mjs";
 import cookieParser from "cookie-parser";
+import "dotenv/config";
 import jwt from "jsonwebtoken";
 
 const app = express();
@@ -15,7 +16,7 @@ app.use("/api/v1", authRouter);
 app.use((req, res, next) => {
   const token = req.cookies.token;
   try {
-    const result = jwt.verify(token, process.env.SECRET);
+    const decoded = jwt.verify(token, process.env.SECRET);
   } catch (error) {}
 });
 
