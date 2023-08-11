@@ -15,11 +15,20 @@ app.use("/api/v1", authRouter);
 
 app.use((req, res, next) => {
   const token = req.cookies.token;
+  console.log("token", token);
   try {
     const decoded = Jwt.verify(token, process.env.SECRET);
-    console.log(decoded);
+    console.log("decoded", decoded);
+    req.body.decoded = {
+      firstName: decoded.firstName,
+      lastName: decoded.lastName,
+      email: decoded.email,
+      isAdmin: decoded.isAdmin,
+    };
+    next();
   } catch (error) {
-    console.log(error);
+    console.log("error ", error);
+    res.status(401).send({ message: "invalid token" });
   }
 });
 
