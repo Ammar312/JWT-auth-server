@@ -33,7 +33,7 @@ header p {
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  gap: 5em;
+  gap: 3em;
 }
 .section1 {
   display: flex;
@@ -41,14 +41,13 @@ header p {
   align-items: center;
 }
 h1 {
-  color: #4c00d1;
+  color: #0027be;
   font-weight: 700;
 }
 .lineAfterh1 {
   color: #bfafe9;
 }
 .formContainer {
-  border: 1px solid black;
   box-shadow: 2px 3px 45px rgba(255, 255, 255, 0.219);
 }
 
@@ -69,15 +68,19 @@ h1 {
 } */
 .inputBox {
   position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid #eaeef4;
   margin-bottom: 28px;
 }
 .inputBox input {
   width: 100%;
   padding: 15px 10px 10px 10px;
-  border: 2px solid rgb(182, 182, 182);
+  border: none;
   border-radius: 5px;
   outline: none;
-  font-size: 1em;
+  font-size: 1.2em;
   color: black;
   transition: 0.5s;
 }
@@ -85,7 +88,7 @@ h1 {
 .inputBox span {
   position: absolute;
   top: -5px;
-  left: 17px;
+  left: 24px;
   padding: 10px;
   pointer-events: none;
   font-size: 1em;
@@ -95,22 +98,21 @@ h1 {
 
 .inputBox input:valid ~ span,
 .inputBox input:focus ~ span {
-  color: rgb(39, 39, 39);
+  color: #a4a1ac;
   transform: translateX(10px) translateY(-7px);
   font-size: 0.85em;
-  padding: 2px 8px;
+  padding: 1px 8px;
   letter-spacing: 0.05em;
   background: white;
   /* background: rgba(133, 133, 255, 0.685); */
 }
 .inputBox input:valid,
 .inputBox input:focus {
-  border: 1px solid rgb(41, 42, 43);
 }
 .icon {
-  position: absolute;
+  /* position: absolute;
   left: 4px;
-  top: 0.4em;
+  top: 0.4em; */
   font-size: 1.6rem;
   margin: 0px 0.5em;
   color: rgb(75, 213, 255);
@@ -119,12 +121,22 @@ h1 {
   width: 100%;
   font-size: 1.1rem;
   padding: 0.8em 0.5em;
+  margin-top: 2em;
   border-radius: 5px;
   border: none;
   cursor: pointer;
   background-color: #4800cb;
   color: white;
   transition: all 0.3s ease-in;
+}
+.bottomLine {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.bottomLine a {
+  text-decoration: none;
+  color: #5200c6;
 }
 @media screen and (max-width: 594px) {
   header p {

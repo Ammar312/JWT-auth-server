@@ -13,24 +13,29 @@
   <body>
     <div class="app">
       <div class="section1">
-        <h1>WELCOME BACK</h1>
+        <h1>Welcome Back</h1>
         <p class="lineAfterh1">Sign to continue</p>
       </div>
       <section class="formContainer">
         <form id="form" class="form">
           <div class="inputBox">
+            <i class="bi bi-envelope icon"></i>
             <input value="" type="email" class="box" id="email" />
             <span>Email</span>
-            <i class="bi bi-envelope icon"></i>
           </div>
           <div class="inputBox">
+            <i class="bi bi-lock icon"></i>
             <input type="password" name="password" id="password" class="box" />
             <span>Password</span>
-            <i class="bi bi-lock icon"></i>
           </div>
           <input type="submit" value="LOGIN" class="btn" id="btn" />
         </form>
       </section>
+      <div class="bottomLine">
+        <span>Don't have account?</span>&nbsp;<a href="#"
+          >Create a new account</a
+        >
+      </div>
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
