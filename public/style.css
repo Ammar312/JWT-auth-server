@@ -46,7 +46,9 @@ header p {
 }
 h1 {
   color: #0027be;
+  font-size: 2.6em;
   font-weight: 700;
+  font-family: "Raleway", sans-serif;
 }
 .lineAfterh1 {
   color: #bfafe9;
@@ -77,6 +79,9 @@ h1 {
   justify-content: center;
   border: 2px solid #eaeef4;
   margin-bottom: 28px;
+}
+.inputBoxSignup {
+  margin-bottom: 15px;
 }
 .inputBox input {
   width: 100%;
@@ -110,9 +115,6 @@ h1 {
   background: white;
   /* background: rgba(133, 133, 255, 0.685); */
 }
-.inputBox input:valid,
-.inputBox input:focus {
-}
 .icon {
   /* position: absolute;
   left: 4px;
@@ -132,6 +134,9 @@ h1 {
   background-color: #4800cb;
   color: white;
   transition: all 0.3s ease-in;
+}
+.btn:hover {
+  box-shadow: 3px 5px 10px rgba(0, 0, 0, 0.247);
 }
 #signupBtn {
   margin-top: 1em;

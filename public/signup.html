@@ -13,37 +13,47 @@
   <body>
     <div class="app" id="signupApp">
       <div class="section1">
-        <h1>Welcome Back</h1>
-        <p class="lineAfterh1">Sign to continue</p>
+        <h1>Create Account</h1>
+        <p class="lineAfterh1">Create a new account</p>
       </div>
       <section class="formContainer">
         <form id="form" class="form">
-          <div class="inputBox">
+          <div class="inputBox inputBoxSignup">
             <i class="bi bi-person icon"></i>
-            <input value="" type="email" class="box" id="email" />
+            <input value="" type="text" class="box" id="firstName" />
             <span>First Name</span>
           </div>
-          <div class="inputBox">
+          <div class="inputBox inputBoxSignup">
             <i class="bi bi-person icon"></i>
-            <input value="" type="email" class="box" id="email" />
+            <input value="" type="text" class="box" id="lastName" />
             <span>Last Name</span>
           </div>
-          <div class="inputBox">
+          <div class="inputBox inputBoxSignup">
             <i class="bi bi-envelope icon"></i>
             <input value="" type="email" class="box" id="email" />
             <span>Email</span>
           </div>
-          <div class="inputBox">
+          <div class="inputBox inputBoxSignup">
             <i class="bi bi-lock icon"></i>
             <input type="password" name="password" id="password" class="box" />
             <span>Password</span>
           </div>
-          <div class="inputBox">
+          <div class="inputBox inputBoxSignup">
             <i class="bi bi-lock icon"></i>
-            <input type="password" name="password" id="password" class="box" />
+            <input
+              type="password"
+              name="password"
+              id="confirmPassword"
+              class="box"
+            />
             <span>Confirm Password</span>
           </div>
-          <input type="submit" value="LOGIN" class="btn" id="signupBtn" />
+          <input
+            type="submit"
+            value="CREATE ACCOUNT"
+            class="btn"
+            id="signupBtn"
+          />
         </form>
       </section>
       <div class="bottomLine">
