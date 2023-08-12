@@ -34,6 +34,10 @@ header p {
   align-items: center;
   flex-direction: column;
   gap: 3em;
+  overflow-x: hidden;
+}
+#signupApp {
+  gap: 1.7em;
 }
 .section1 {
   display: flex;
@@ -128,6 +132,9 @@ h1 {
   background-color: #4800cb;
   color: white;
   transition: all 0.3s ease-in;
+}
+#signupBtn {
+  margin-top: 1em;
 }
 .bottomLine {
   display: flex;

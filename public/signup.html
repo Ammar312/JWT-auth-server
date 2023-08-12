@@ -11,14 +11,24 @@
     <title>Document</title>
   </head>
   <body>
-    <div class="app">
+    <div class="app" id="signupApp">
       <div class="section1">
         <h1>Welcome Back</h1>
         <p class="lineAfterh1">Sign to continue</p>
       </div>
       <section class="formContainer">
         <form id="form" class="form">
-          <div class="inputBox inputBoxSignup">
+          <div class="inputBox">
+            <i class="bi bi-person icon"></i>
+            <input value="" type="email" class="box" id="email" />
+            <span>First Name</span>
+          </div>
+          <div class="inputBox">
+            <i class="bi bi-person icon"></i>
+            <input value="" type="email" class="box" id="email" />
+            <span>Last Name</span>
+          </div>
+          <div class="inputBox">
             <i class="bi bi-envelope icon"></i>
             <input value="" type="email" class="box" id="email" />
             <span>Email</span>
@@ -28,13 +38,16 @@
             <input type="password" name="password" id="password" class="box" />
             <span>Password</span>
           </div>
-          <input type="submit" value="LOGIN" class="btn" id="btn" />
+          <div class="inputBox">
+            <i class="bi bi-lock icon"></i>
+            <input type="password" name="password" id="password" class="box" />
+            <span>Confirm Password</span>
+          </div>
+          <input type="submit" value="LOGIN" class="btn" id="signupBtn" />
         </form>
       </section>
       <div class="bottomLine">
-        <span>Don't have account?</span>&nbsp;<a href="./signup.html"
-          >Create a new account</a
-        >
+        <span>Already have account?</span>&nbsp;<a href="./index.html">Login</a>
       </div>
     </div>
 
