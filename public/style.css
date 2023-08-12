@@ -9,7 +9,6 @@
   font-family: "Noto Sans", sans-serif;
 }
 body {
-  background: linear-gradient(to bottom, #2193b0, #6dd5ed);
   /* background: linear-gradient(to bottom, #ddd6f3, #faaca8); */
   min-height: 100vh;
 }
@@ -27,34 +26,54 @@ header p {
   word-spacing: 0.3em;
   letter-spacing: 0.05em;
 }
+.app {
+  display: flex;
+  width: 100vw;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 1em;
+}
+h1 {
+  color: blue;
+  font-weight: 700;
+}
+.lineAfterh1 {
+}
 .formContainer {
-  width: 30em;
-  padding: 1em;
+  border: 1px solid black;
   background-color: aliceblue;
   box-shadow: 2px 3px 45px rgba(255, 255, 255, 0.219);
-  border-radius: 7px;
-  margin: 1.5em 2em;
 }
 
 .formContainer form {
+  width: 100%;
   display: flex;
   flex-direction: column;
   padding: 1em;
 }
-label {
-  font-size: 1.4rem;
-}
-.box {
-  width: 18em;
+/* .box {
+  width: 100%;
   padding: 0.6em;
   font-size: 1.2rem;
   outline: none;
   border: 2px solid rgb(121, 119, 119);
   border-radius: 6px;
   margin-bottom: 0.7em;
+} */
+.inputBox input {
+  width: 100%;
+  padding: 15px 10px 10px 10px;
+  border: 1px solid rgba(255, 255, 255, 0.452);
+  border-radius: 5px;
+  outline: none;
+  font-size: 1em;
+  color: black;
+  transition: 0.5s;
 }
 .btn {
-  width: 6em;
+  width: 100%;
   font-size: 1.3rem;
   padding: 0.5em;
   border-radius: 6px;
@@ -63,6 +82,33 @@ label {
   background-color: #2193b0;
   color: white;
   transition: all 0.3s ease-in;
+}
+.inputBox {
+  position: relative;
+  margin-bottom: 28px;
+}
+.inputBox span {
+  position: absolute;
+  left: 0px;
+  padding: 10px;
+  pointer-events: none;
+  font-size: 1em;
+  text-transform: uppercase;
+  transition: 0.5s;
+}
+
+.inputBox input:valid ~ span,
+.inputBox input:focus ~ span {
+  color: rgb(39, 39, 39);
+  transform: translateX(10px) translateY(-7px);
+  font-size: 0.85em;
+  padding: 2px 8px;
+  letter-spacing: 0.15em;
+  background: rgba(133, 133, 255, 0.685);
+}
+.inputBox input:valid,
+.inputBox input:focus {
+  border: 1px solid rgb(41, 42, 43);
 }
 
 @media screen and (max-width: 594px) {
@@ -88,16 +134,6 @@ label {
 @media screen and (max-width: 385px) {
   label {
     font-size: 1.2rem;
-  }
-  .box {
-    width: 12em;
-    padding: 0.6em;
-    font-size: 1.2rem;
-  }
-  .btn {
-    width: 5em;
-    font-size: 1.2rem;
-    padding: 0.5em;
   }
 }
 @media screen and (max-width: 350px) {

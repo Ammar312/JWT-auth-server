@@ -7,24 +7,30 @@
     <title>Document</title>
   </head>
   <body>
-    <header>
-      <p>Signup Server</p>
-    </header>
-    <section class="formContainer">
-      <form id="form" class="form">
-        <label for="email">Email</label>
-        <input
-          type="email"
-          placeholder="qwe@gmail.com"
-          class="box"
-          id="email"
-        />
-        <label for="email">Password</label>
-        <input type="password" name="password" id="password" class="box" />
-        <input type="submit" class="btn" id="btn" />
-      </form>
-    </section>
-    <a href="./home.html">Home</a>
+    <div class="app">
+      <h1>WELCOME BACK</h1>
+      <p class="lineAfterh1">Sign to continue</p>
+      <section class="formContainer">
+        <form id="form" class="form">
+          <div class="inputBox">
+            <input
+              placeholder="qwe@gmail.com"
+              value=""
+              type="email"
+              class="box"
+              id="email"
+            />
+            <span>Email</span>
+          </div>
+          <div class="inputBox">
+            <input type="password" name="password" id="password" class="box" />
+            <span>Password</span>
+          </div>
+          <input type="submit" class="btn" id="btn" />
+        </form>
+      </section>
+    </div>
+
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <script type="module" src="./script.js"></script>
   </body>
