@@ -3,30 +3,32 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css"
+    />
     <link rel="stylesheet" href="style.css" />
     <title>Document</title>
   </head>
   <body>
     <div class="app">
-      <h1>WELCOME BACK</h1>
-      <p class="lineAfterh1">Sign to continue</p>
+      <div class="section1">
+        <h1>WELCOME BACK</h1>
+        <p class="lineAfterh1">Sign to continue</p>
+      </div>
       <section class="formContainer">
         <form id="form" class="form">
           <div class="inputBox">
-            <input
-              placeholder="qwe@gmail.com"
-              value=""
-              type="email"
-              class="box"
-              id="email"
-            />
+            <input value="" type="email" class="box" id="email" />
             <span>Email</span>
+            <i class="bi bi-envelope icon"></i>
           </div>
           <div class="inputBox">
             <input type="password" name="password" id="password" class="box" />
             <span>Password</span>
+            <i class="bi bi-lock icon"></i>
           </div>
-          <input type="submit" class="btn" id="btn" />
+          <input type="submit" value="LOGIN" class="btn" id="btn" />
         </form>
       </section>
     </div>
