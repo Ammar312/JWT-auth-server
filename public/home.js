@@ -15,6 +15,10 @@ form.addEventListener("submit", (e) => {
       displayAlert(response.data, "black");
     })
     .catch(function (error) {
+      if (error.response.status === 401) {
+        afterExpires();
+        return;
+      }
       displayAlert(error.message, "red");
     });
   document.querySelector("#formContainer").style.display = "none";
@@ -24,7 +28,6 @@ form.addEventListener("submit", (e) => {
 window.addEventListener("load", () => {
   axios
     .get("api/v1/posts")
-    // .get("https://wild-ruby-tortoise-hose.cyclic.app/api/v1/posts")
     .then(function (response) {
       // handle success
       const data = response.data;
@@ -63,6 +66,11 @@ window.addEventListener("load", () => {
     })
     .catch(function (error) {
       // handle error
+      if (error.response.status === 401) {
+        afterExpires();
+        return;
+      }
+      console.log(error.response.status);
       displayAlert(error.message, "red");
     });
 });
@@ -75,7 +83,12 @@ const deletePostFunc = (id) => {
       displayAlert(response.data, "red");
     })
     .catch(function (error) {
+      if (error.response.status === 401) {
+        afterExpires();
+        return;
+      }
       displayAlert(error.message, "red");
+      console.log(error);
     });
 };
 
@@ -91,7 +104,6 @@ const editPostFunc = (id, title, text) => {
     e.preventDefault();
     axios
       .put(`api/v1/post/${id}`, {
-        //   .put(`https://wild-ruby-tortoise-hose.cyclic.app/api/v1/post/${id}`, {
         title: editFormTitle.value,
         text: editFormText.value,
       })
@@ -99,6 +111,10 @@ const editPostFunc = (id, title, text) => {
         displayAlert(response.data, "green");
       })
       .catch(function (error) {
+        if (error.response.status === 401) {
+          afterExpires();
+          return;
+        }
         displayAlert(error.message, "red");
       });
     editForm.reset();
@@ -131,3 +147,15 @@ const displayAlert = (txt, clss) => {
     alertBox.classList.remove(clss);
   }, 2000);
 };
+
+const afterExpires = () => {
+  document.querySelector("#app").style.opacity = 0.1;
+  document.querySelector("#expired").style.display = "block";
+};
+
+const jumpToLoginBtn = document.querySelector("#jumpToLoginBtn");
+jumpToLoginBtn.addEventListener("click", () => {
+  document.querySelector("#app").style.opacity = 1;
+  document.querySelector("#expired").style.display = "none";
+  window.location.replace("/index.html");
+});

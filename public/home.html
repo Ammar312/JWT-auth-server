@@ -16,35 +16,47 @@
     <title>Crud-Operation with SERVER</title>
   </head>
   <body>
-    <header>
-      <p>SERVER CRUD</p>
-    </header>
-    <button class="createPostBtn" id="createPostBtn">Create Post</button>
-    <div class="formContainer" id="formContainer">
-      <form id="form" class="form">
-        <label for="" class="label">Title :</label>
-        <input type="text" name="title" id="title" class="titleForm" />
-        <br />
-        <label for="" class="label">Text :</label>
-        <input type="text" name="text" id="text" class="titleForm" />
-        <br />
-        <input type="submit" id="btn" class="btn" value="Post" />
-      </form>
+    <div class="app" id="app">
+      <header>
+        <p>SERVER CRUD</p>
+      </header>
+      <button class="createPostBtn" id="createPostBtn">Create Post</button>
+      <div class="formContainer" id="formContainer">
+        <form id="form" class="form">
+          <label for="" class="label">Title :</label>
+          <input type="text" name="title" id="title" class="titleForm" />
+          <br />
+          <label for="" class="label">Text :</label>
+          <input type="text" name="text" id="text" class="titleForm" />
+          <br />
+          <input type="submit" id="btn" class="btn" value="Post" />
+        </form>
+      </div>
+      <section class="postContainer" id="postContainer"></section>
+      <div class="editFormDiv" id="editFormDiv">
+        <span class="cross" id="cross"><i class="bi bi-x-lg"></i></span>
+        <form id="editForm" class="editForm">
+          <label for="title">Title</label>
+          <input type="text" id="editFormTitle" class="editFormInput" />
+          <br />
+          <label for="text">Text</label>
+          <input type="text" id="editFormText" class="editFormInput" />
+          <br />
+          <input
+            type="submit"
+            name=""
+            id="editFormBtn"
+            class="editFormButton"
+          />
+        </form>
+      </div>
+
+      <span class="alertBox" id="alertBox"></span>
     </div>
-    <section class="postContainer" id="postContainer"></section>
-    <div class="editFormDiv" id="editFormDiv">
-      <span class="cross" id="cross"><i class="bi bi-x-lg"></i></span>
-      <form id="editForm" class="editForm">
-        <label for="title">Title</label>
-        <input type="text" id="editFormTitle" class="editFormInput" />
-        <br />
-        <label for="text">Text</label>
-        <input type="text" id="editFormText" class="editFormInput" />
-        <br />
-        <input type="submit" name="" id="editFormBtn" class="editFormButton" />
-      </form>
+    <div class="expired" id="expired">
+      <div class="message">Session Expired</div>
+      <button class="jumpToLoginBtn" id="jumpToLoginBtn">Login</button>
     </div>
-    <span class="alertBox" id="alertBox"></span>
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <script type="module" src="./home.js"></script>
   </body>
