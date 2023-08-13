@@ -11,7 +11,10 @@ router.post("/login", async (req, res, next) => {
     res.status(403).send({ message: "Required Paramater Missing" });
     return;
   }
-  const emailInLower = req.body.email.toLowerCase();
+
+  const emailInLower = req.body.email.toString();
+  emailInLower.toLowerCase();
+
   try {
     const result = await dbCollection.findOne({ email: emailInLower });
     if (!result) {
