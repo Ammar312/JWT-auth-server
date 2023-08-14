@@ -11,7 +11,6 @@
 }
 .formContainer {
   /* display: none; */
-  border: 1px solid black;
   max-width: 50%;
   width: 100%;
   position: fixed;
@@ -36,8 +35,14 @@
   /* padding: 1em; */
   row-gap: 1em;
 }
+.formCross {
+  position: absolute;
+  right: 5px;
+  top: 4px;
+}
 .heightIncrease {
   height: 20em;
+  border: 1px solid black;
 }
 .createPostBtn {
   width: 2em;

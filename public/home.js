@@ -44,10 +44,10 @@ window.addEventListener("load", () => {
         btnDiv.classList.add("btnDiv");
         const deleteButton = document.createElement("button");
         deleteButton.classList.add("button");
-        deleteButton.innerText = "Delete";
+        deleteButton.innerText = `<i class="bi bi-trash3-fill"></i>`;
         const editButton = document.createElement("button");
         editButton.classList.add("button");
-        editButton.innerText = "Edit";
+        editButton.innerText = `<i class="bi bi-pencil"></i>`;
         btnDiv.appendChild(deleteButton);
         btnDiv.appendChild(editButton);
         post.appendChild(title);
@@ -59,7 +59,6 @@ window.addEventListener("load", () => {
           editPostFunc(ele._id, ele.title, ele.text)
         );
         console.log(ele);
-        console.log(ele._id);
       });
       //   console.log(response.data);
     })
@@ -129,7 +128,7 @@ cross.addEventListener("click", () => {
   editFormDiv.style.display = "none";
 });
 const formCross = document.querySelector("#formCross");
-cross.addEventListener("click", () => {
+formCross.addEventListener("click", () => {
   const formContainer = document.querySelector("#formContainer");
   formContainer.classList.remove("heightIncrease");
   createPostBtn.style.display = "block";
