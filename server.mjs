@@ -12,7 +12,7 @@ const PORT = process.env.PORT || 3000;
 app.use(express.json());
 app.use(cookieParser());
 app.use("/api/v1", authRouter);
-app.use(express.static(path.join(__dirname, "public")));
+
 app.use((req, res, next) => {
   const token = req.cookies.token;
   console.log("token", token);
@@ -33,7 +33,7 @@ app.use((req, res, next) => {
 });
 
 app.use("/api/v1", apiv1);
-
+app.use(express.static(path.join(__dirname, "public")));
 app.listen(PORT, () => {
   console.log(`Example app listening on port ${PORT}`);
 });

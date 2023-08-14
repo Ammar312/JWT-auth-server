@@ -127,5 +127,35 @@
 }
 .post {
   border: 1px solid black;
-  width: 15em;
+  min-width: 19em;
+  min-height: 10em;
+  border-radius: 9%;
+  padding: 1em;
+  margin: 1em;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  box-shadow: 2px 4px 20px rgba(0, 0, 0, 0.137);
+}
+.title {
+  font-size: 2rem;
+  font-weight: bold;
+  text-transform: capitalize;
+}
+.text {
+  font-size: 1.5rem;
+  margin: 1.2em 0em;
+}
+.btnDiv {
+  display: flex;
+  justify-content: space-around;
+}
+.btnDiv :nth-child(2) {
+  color: aquamarine;
+}
+.button {
+  font-size: 1.5rem;
+  background: none;
+  border: none;
+  color: red;
 }

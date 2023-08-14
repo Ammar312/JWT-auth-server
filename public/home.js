@@ -44,10 +44,10 @@ window.addEventListener("load", () => {
         btnDiv.classList.add("btnDiv");
         const deleteButton = document.createElement("button");
         deleteButton.classList.add("button");
-        deleteButton.innerText = `<i class="bi bi-trash3-fill"></i>`;
+        deleteButton.innerHTML = `<i class="bi bi-trash3-fill"></i>`;
         const editButton = document.createElement("button");
         editButton.classList.add("button");
-        editButton.innerText = `<i class="bi bi-pencil"></i>`;
+        editButton.innerHTML = `<i class="bi bi-pencil"></i>`;
         btnDiv.appendChild(deleteButton);
         btnDiv.appendChild(editButton);
         post.appendChild(title);
