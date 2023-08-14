@@ -6,6 +6,17 @@
 .formContainer {
   display: none;
 }
+.createPostBtn {
+  width: 2em;
+  height: 2em;
+  border-radius: 50%;
+  border: 2px inset black;
+  font-size: 1.8rem;
+  background: white;
+  position: fixed;
+  bottom: 1.9em;
+  right: 10px;
+}
 .editFormDiv {
   display: none;
   position: sticky;

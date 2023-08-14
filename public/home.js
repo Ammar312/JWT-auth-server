@@ -6,7 +6,6 @@ form.addEventListener("submit", (e) => {
   const text = document.querySelector("#text").value;
   axios
     .post("api/v1/post", {
-      // .post("https://wild-ruby-tortoise-hose.cyclic.app/api/v1/post", {
       title: title,
       text: text,
     })
@@ -78,7 +77,6 @@ window.addEventListener("load", () => {
 const deletePostFunc = (id) => {
   axios
     .delete(`api/v1/post/${id}`)
-    // .delete(`https://wild-ruby-tortoise-hose.cyclic.app/api/v1/post/${id}`)
     .then(function (response) {
       displayAlert(response.data, "red");
     })
