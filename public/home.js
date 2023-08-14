@@ -128,10 +128,17 @@ cross.addEventListener("click", () => {
   const editFormDiv = document.querySelector("#editFormDiv");
   editFormDiv.style.display = "none";
 });
+const formCross = document.querySelector("#formCross");
+cross.addEventListener("click", () => {
+  const formContainer = document.querySelector("#formContainer");
+  formContainer.classList.remove("heightIncrease");
+  createPostBtn.style.display = "block";
+});
 
 const createPostBtn = document.querySelector("#createPostBtn");
 createPostBtn.addEventListener("click", () => {
-  document.querySelector("#formContainer").style.display = "block";
+  const formContainer = document.querySelector("#formContainer");
+  formContainer.classList.add("heightIncrease");
   createPostBtn.style.display = "none";
 });
 
