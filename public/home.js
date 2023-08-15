@@ -24,7 +24,7 @@ form.addEventListener("submit", (e) => {
   createPostBtn.style.display = "block";
 });
 
-window.addEventListener("load", () => {
+const getAllPosts = () => {
   axios
     .get("api/v1/posts")
     .then(function (response) {
@@ -71,7 +71,7 @@ window.addEventListener("load", () => {
       console.log(error.response.status);
       displayAlert(error.message, "red");
     });
-});
+};
 
 const deletePostFunc = (id) => {
   axios
@@ -163,3 +163,5 @@ jumpToLoginBtn.addEventListener("click", () => {
   document.querySelector("#expired").style.display = "none";
   window.location.replace("/index.html");
 });
+
+window.addEventListener("load", getAllPosts);
