@@ -58,7 +58,6 @@ const getAllPosts = () => {
         editButton.addEventListener("click", () =>
           editPostFunc(ele._id, ele.title, ele.text)
         );
-        console.log(ele);
       });
       //   console.log(response.data);
     })

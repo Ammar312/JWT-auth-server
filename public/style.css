@@ -150,6 +150,34 @@ h1 {
   text-decoration: none;
   color: #5200c6;
 }
+
+.alertBox {
+  position: sticky;
+  bottom: 70%;
+  left: 80%;
+  width: auto;
+  font-size: 1.2rem;
+  padding: 0.2em 0.8rem 0.2rem 0.8rem;
+  border-radius: 5px;
+  color: white;
+  visibility: hidden;
+}
+.red {
+  visibility: visible;
+  background: rgb(243, 40, 40);
+}
+.blue {
+  visibility: visible;
+  background: blue;
+}
+.green {
+  visibility: visible;
+  background: #56ab2f;
+}
+.black {
+  visibility: visible;
+  background: black;
+}
 @media screen and (max-width: 594px) {
   header p {
     font-size: 2rem;

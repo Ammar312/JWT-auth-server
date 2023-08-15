@@ -10,11 +10,23 @@ form.addEventListener("submit", async (e) => {
       password: password,
     });
     if (response.status === 200) {
-      alert(response.data.message);
-      window.location.assign("/home.html");
-      console.log(response);
+      displayAlert(response.data.message, "green");
+      setTimeout(() => {
+        window.location.assign("/home.html");
+      }, 2000);
     }
   } catch (error) {
     console.log(error);
+    displayAlert(error.message, "red");
   }
 });
+const alertBox = document.querySelector("#alertBox");
+const displayAlert = (txt, clss) => {
+  alertBox.textContent = txt;
+  alertBox.classList.add(clss);
+  // remove alert
+  setTimeout(() => {
+    alertBox.textContent = "";
+    alertBox.classList.remove(clss);
+  }, 2000);
+};

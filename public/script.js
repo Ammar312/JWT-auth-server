@@ -17,8 +17,10 @@ form.addEventListener("submit", (e) => {
       })
       .then(function (response) {
         console.log(response.data);
-        alert("Signup Successfully");
-        window.location.replace("index.html");
+        displayAlert("Signup Successfully", "red");
+        setTimeout(() => {
+          window.location.replace("index.html");
+        }, 2000);
       })
       .catch(function (error) {
         console.log(error);
@@ -27,3 +29,13 @@ form.addEventListener("submit", (e) => {
     alert("Password must be same");
   }
 });
+const alertBox = document.querySelector("#alertBox");
+const displayAlert = (txt, clss) => {
+  alertBox.textContent = txt;
+  alertBox.classList.add(clss);
+  // remove alert
+  setTimeout(() => {
+    alertBox.textContent = "";
+    alertBox.classList.remove(clss);
+  }, 2000);
+};
