@@ -1,9 +1,11 @@
 @import url("https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;600&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;600;700&display=swap");
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: "Lato", sans-serif;
 }
 body {
   background: linear-gradient(to right, #0f0c29, #302b63, #24243e);
@@ -12,7 +14,6 @@ body {
   width: 100%;
   height: 100vh;
   opacity: 1;
-  /* overflow-x: hidden; */
   background: linear-gradient(to right, #0f0c29, #302b63, #24243e);
 }
 header {
@@ -26,8 +27,9 @@ header {
   font-size: 3.5rem;
   font-weight: 600;
   font-family: "Rubik", sans-serif;
-  position: sticky;
-  top: 0;
+  /* position: sticky;
+  top: 0; */
+  letter-spacing: 4px;
 }
 .formContainer {
   /* display: none; */
@@ -42,7 +44,7 @@ header {
   overflow: hidden;
   transition: all 0.5s ease;
   color: white;
-  /* margin-left: -300px;  */
+  border-radius: 7px;
 }
 .formCross {
   color: white;
@@ -94,7 +96,7 @@ header {
   background: white;
   position: fixed;
   bottom: 1.9em;
-  right: 14px;
+  right: 18px;
   border: none;
   cursor: pointer;
 }
@@ -137,26 +139,24 @@ header {
 }
 .expired {
   position: fixed;
-  top: 50vh;
-  /* bottom: 50vh; */
-  margin-right: auto;
-  margin-left: auto;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   border: 1px solid black;
   padding: 1.5em;
-  width: 17em;
-  max-width: 25em;
-  height: 7em;
+  min-width: 20em;
+  height: 13em;
   color: white;
   background: rgb(36, 35, 35);
   border-radius: 8px;
   display: none;
 }
 .expired .message {
-  font-size: 2rem;
+  font-size: 1.8rem;
 }
 .expired .jumpToLoginBtn {
   font-size: 1.5rem;
-  margin: 22px 0px;
+  margin: 25px 0px 10px 0px;
   border: 2px inset white;
   color: white;
   background: black;
@@ -202,11 +202,12 @@ header {
   justify-content: space-around;
 }
 .btnDiv :nth-child(2) {
-  color: rgb(45, 124, 98);
+  color: #11bd20;
 }
 .button {
   font-size: 1.5rem;
   background: none;
   border: none;
-  color: red;
+  color: #e92929;
+  cursor: pointer;
 }

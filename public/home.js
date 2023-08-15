@@ -157,12 +157,14 @@ const displayAlert = (txt, clss) => {
 const afterExpires = () => {
   document.querySelector("#app").style.opacity = 0.1;
   document.querySelector("#expired").style.display = "block";
+  createPostBtn.style.display = "none";
 };
 
 const jumpToLoginBtn = document.querySelector("#jumpToLoginBtn");
 jumpToLoginBtn.addEventListener("click", () => {
   document.querySelector("#app").style.opacity = 1;
   document.querySelector("#expired").style.display = "none";
+  createPostBtn.style.display = "block";
   window.location.replace("/index.html");
 });
 
