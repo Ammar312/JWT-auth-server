@@ -5,10 +5,14 @@ form.addEventListener("submit", async (e) => {
   const password = document.querySelector("#password").value;
 
   try {
-    const response = await axios.post("api/v1/login", {
-      email: email,
-      password: password,
-    });
+    const response = await axios.post(
+      "api/v1/login",
+      {
+        email: email,
+        password: password,
+      },
+      { withCredentials: true }
+    );
     if (response.status === 200) {
       displayAlert(response.data.message, "green");
       setTimeout(() => {
