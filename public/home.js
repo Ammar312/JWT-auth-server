@@ -91,6 +91,7 @@ const deletePostFunc = (id) => {
 
 const editPostFunc = (id, title, text) => {
   const editFormDiv = document.querySelector("#editFormDiv");
+  createPostBtn.style.display = "none";
   editFormDiv.style.display = "block";
   const editForm = document.querySelector("#editForm");
   const editFormTitle = document.querySelector("#editFormTitle");
@@ -126,6 +127,7 @@ const cross = document.querySelector("#cross");
 cross.addEventListener("click", () => {
   const editFormDiv = document.querySelector("#editFormDiv");
   editFormDiv.style.display = "none";
+  createPostBtn.style.display = "block";
 });
 const formCross = document.querySelector("#formCross");
 formCross.addEventListener("click", () => {

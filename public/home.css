@@ -31,20 +31,24 @@ header {
 }
 .formContainer {
   /* display: none; */
-  max-width: 50%;
-  width: 100%;
+  min-width: 70%;
+  width: 80%;
   position: fixed;
-  top: 4em;
+  top: 6em;
   z-index: 5;
-  background: mediumaquamarine;
-  left: 40%;
+  background-color: rgb(51, 52, 53);
+  left: 10%;
   height: 0px;
   overflow: hidden;
-  transition: all 1s ease;
+  transition: all 0.5s ease;
+  color: white;
   /* margin-left: -300px;  */
 }
 .formCross {
   color: white;
+  position: absolute;
+  right: 5px;
+  top: 4px;
 }
 .form {
   display: flex;
@@ -54,26 +58,45 @@ header {
   width: 100%;
   /* padding: 1em; */
   row-gap: 1em;
+  padding: 1em;
 }
-.formCross {
-  position: absolute;
-  right: 5px;
-  top: 4px;
+.label {
+  font-size: 1.8rem;
+}
+.titleForm {
+  font-size: 1.2rem;
+  padding: 0.8em;
+}
+.btn {
+  min-width: 270px;
+  font-size: 1.1rem;
+  padding: 0.7em 0.5em;
+  margin-top: 2em;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+  background-color: #4800cb;
+  color: white;
+  transition: all 0.3s ease-in;
+}
+.btn:hover {
+  box-shadow: 3px 5px 10px rgba(0, 0, 0, 0.247);
 }
 .heightIncrease {
-  height: 20em;
+  height: 27em;
   border: 1px solid black;
 }
 .createPostBtn {
   width: 2em;
   height: 2em;
   border-radius: 50%;
-  border: 2px inset black;
   font-size: 1.8rem;
   background: white;
   position: fixed;
   bottom: 1.9em;
-  right: 10px;
+  right: 14px;
+  border: none;
+  cursor: pointer;
 }
 .editFormDiv {
   display: none;
@@ -90,9 +113,11 @@ header {
 .editForm {
   display: flex;
   flex-direction: column;
+  gap: 0.3em;
   align-items: center;
   justify-content: center;
   color: aliceblue;
+  font-size: 1.4rem;
 }
 .editFormInput {
   font-size: 1.2rem;
