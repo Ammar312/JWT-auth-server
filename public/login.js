@@ -21,7 +21,7 @@ form.addEventListener("submit", async (e) => {
     }
   } catch (error) {
     console.log(error);
-    displayAlert(error.message, "red");
+    displayAlert(error.response.data.message, "red");
   }
 });
 const alertBox = document.querySelector("#alertBox");

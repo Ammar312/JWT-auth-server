@@ -17,16 +17,17 @@ form.addEventListener("submit", (e) => {
       })
       .then(function (response) {
         console.log(response.data);
-        displayAlert("Signup Successfully", "red");
+        displayAlert("Signup Successfully", "green");
         setTimeout(() => {
           window.location.replace("index.html");
         }, 2000);
       })
       .catch(function (error) {
         console.log(error);
+        displayAlert(error.response.data.message, "red");
       });
   } else {
-    alert("Password must be same");
+    displayAlert("Password must be same", "black");
   }
 });
 const alertBox = document.querySelector("#alertBox");
