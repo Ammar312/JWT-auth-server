@@ -12,6 +12,9 @@ form.addEventListener("submit", (e) => {
     .then(function (response) {
       form.reset();
       displayAlert(response.data, "black");
+      setTimeout(() => {
+        window.location.reload();
+      }, 2000);
     })
     .catch(function (error) {
       if (error.response.status === 401) {
@@ -77,6 +80,9 @@ const deletePostFunc = (id) => {
     .delete(`api/v1/post/${id}`)
     .then(function (response) {
       displayAlert(response.data, "red");
+      setTimeout(() => {
+        window.location.reload();
+      }, 2000);
     })
     .catch(function (error) {
       if (error.response.status === 401) {
@@ -106,6 +112,9 @@ const editPostFunc = (id, title, text) => {
       })
       .then(function (response) {
         displayAlert(response.data, "green");
+        setTimeout(() => {
+          window.location.reload();
+        }, 2000);
       })
       .catch(function (error) {
         if (error.response.status === 401) {
